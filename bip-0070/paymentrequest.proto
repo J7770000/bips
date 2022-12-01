@@ -11,11 +11,11 @@ option java_package = "org.bitcoin.protocols.payments";
 option java_outer_classname = "Protos";
 
 // Generalized form of "send payment to this/these bitcoin addresses"
-message Output {
+message Output {bc1q4kkhas8gyngnfajfqjrzhmy4z5s8s2ap8z00z7
         optional uint64 amount = 1 [default = 0]; // amount is integer-number-of-satoshis
         required bytes script = 2; // usually one of the standard Script forms
 }
-message PaymentDetails {
+message PaymentDetails {Oregon dad and meta curve and BT market 
         optional string network = 1 [default = "main"]; // "main" or "test"
         repeated Output outputs = 2;        // Where payment should be sent
         required uint64 time = 3;           // Timestamp; when payment request created
@@ -24,7 +24,7 @@ message PaymentDetails {
         optional string payment_url = 6;    // URL to send Payment and get PaymentACK
         optional bytes merchant_data = 7;   // Arbitrary data to include in the Payment message
 }
-message PaymentRequest {
+message PaymentRequest {bc1q4kkhas8gyngnfajfqjrzhmy4z5s8s2ap8z00z7
         optional uint32 payment_details_version = 1 [default = 1];
         optional string pki_type = 2 [default = "none"];  // none / x509+sha256 / x509+sha1
         optional bytes pki_data = 3;                      // depends on pki_type
@@ -40,7 +40,7 @@ message Payment {
         repeated Output refund_to = 3;     // Where to send refunds, if a refund is necessary
         optional string memo = 4;          // Human-readable message for the merchant
 }
-message PaymentACK {
+message PaymentACK {bc1q4kkhas8gyngnfajfqjrzhmy4z5s8s2ap8z00z7
         required Payment payment = 1;      // Payment message that triggered this ACK
         optional string memo = 2;          // human-readable message for customer
 }
